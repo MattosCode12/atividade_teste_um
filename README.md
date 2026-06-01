@@ -55,3 +55,15 @@ Consultar registros exibidos em tabela.
 Encerrar a sessão através do logout.
 
 A proteção de acesso é realizada utilizando sessões PHP, impedindo que usuários não autenticados acessem funcionalidades internas da aplicação.
+
+Listagem de Usuários
+
+O sistema possui um componente responsável por consultar os registros da tabela users e exibi-los em uma tabela HTML.
+
+As informações apresentadas incluem:
+
+ID do usuário;
+Nome de usuário;
+Senha cadastrada.
+
+Durante a análise foi identificado que a exibição das senhas representa um risco de segurança. Como melhoria futura, recomenda-se armazenar as senhas utilizando criptografia (password_hash) e remover sua exibição da interface.
