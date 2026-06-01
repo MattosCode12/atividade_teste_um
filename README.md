@@ -33,3 +33,14 @@ Uma sessão é criada.
 O usuário é redirecionado para a página inicial.
 Caso contrário:
 Uma mensagem de erro é exibida.
+
+Logout do Sistema
+
+O sistema possui um arquivo responsável pelo encerramento da sessão do usuário. Quando acionado, o arquivo:
+
+Recupera a sessão atual.
+Remove todos os dados armazenados.
+Redireciona o usuário para a página inicial.
+Finaliza a execução do script.
+
+Esse processo garante que apenas usuários autenticados possam acessar as áreas restritas da aplicação.
