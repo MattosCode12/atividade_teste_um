@@ -71,3 +71,35 @@ Durante a análise foi identificado que a exibição das senhas representa um ri
 Cabeçalho da Aplicação
 
 O sistema utiliza um componente de cabeçalho para exibir o nome da aplicação em todas as páginas. Essa abordagem permite reutilizar o mesmo código em diferentes telas, facilitando a manutenção e a padronização da interface.
+
+Sistema Simples de Login em PHP
+Objetivo
+
+Sistema desenvolvido em PHP e MySQL para realizar autenticação de usuários, cadastro, controle de sessões e listagem de usuários cadastrados.
+
+Funcionamento
+
+O usuário realiza login através da tela inicial. Após a autenticação, é direcionado para a página principal, onde pode visualizar seu usuário, cadastrar novos usuários, consultar os registros existentes e realizar logout.
+
+Banco de Dados
+
+O sistema utiliza o banco sistema_simples, contendo uma tabela de usuários com os campos:
+
+id
+usuario
+senha
+
+Principais Aprendizados
+
+Durante a análise e documentação do projeto foi possível compreender:
+
+Estrutura básica de aplicações PHP.
+Integração entre PHP e MySQL.
+Utilização da biblioteca MySQLi.
+Criação e manipulação de sessões.
+Uso de formulários HTML.
+Processamento de requisições POST.
+Execução de consultas SQL.
+Organização de componentes reutilizáveis.
+Controle de autenticação.
+Importância da documentação e comentários no código.
