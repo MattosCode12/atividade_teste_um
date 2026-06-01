@@ -1,3 +1,7 @@
+<!-- Cabeçalho da aplicação -->
 <header>
-    <h2> Site Teste</h2>
+
+    <!-- Título exibido no topo da página -->
+    <h2>Site Teste</h2>
+
 </header>
