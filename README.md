@@ -1,105 +1,141 @@
-Sistema de Login com PHP
-Objetivo
+# Sistema Simples de Login em PHP
 
-Desenvolver uma aplicação simples de autenticação de usuários utilizando PHP e banco de dados MySQL.
-
-O sistema permite que usuários informem login e senha para acessar uma área protegida da aplicação.
-
-Estrutura Básica dos Arquivos
-login.php
-
-Arquivo principal responsável pela autenticação do usuário.
-
-infra/db/connect.php
-
-Responsável pela conexão com o banco de dados.
-
-public/home.php
-
-Página acessada após o login bem-sucedido.
-
-public/component/table.php
-
-Componente incluído na interface da aplicação.
-
-Funcionamento Geral
-O usuário acessa a tela de login.
-Informa usuário e senha.
-O formulário envia os dados via método POST.
-O PHP recebe os dados.
-Uma consulta SQL é executada no banco de dados.
-Caso exista um usuário correspondente:
-Uma sessão é criada.
-O usuário é redirecionado para a página inicial.
-Caso contrário:
-Uma mensagem de erro é exibida.
-
-Logout do Sistema
-
-O sistema possui um arquivo responsável pelo encerramento da sessão do usuário. Quando acionado, o arquivo:
-
-Recupera a sessão atual.
-Remove todos os dados armazenados.
-Redireciona o usuário para a página inicial.
-Finaliza a execução do script.
-
-Esse processo garante que apenas usuários autenticados possam acessar as áreas restritas da aplicação.
-
-Home do Sistema
-
-A página principal do sistema é acessada apenas por usuários autenticados. Nela é possível:
-
-Visualizar o usuário atualmente logado.
-Cadastrar novos usuários.
-Consultar registros exibidos em tabela.
-Encerrar a sessão através do logout.
-
-A proteção de acesso é realizada utilizando sessões PHP, impedindo que usuários não autenticados acessem funcionalidades internas da aplicação.
-
-Listagem de Usuários
-
-O sistema possui um componente responsável por consultar os registros da tabela users e exibi-los em uma tabela HTML.
-
-As informações apresentadas incluem:
-
-ID do usuário;
-Nome de usuário;
-Senha cadastrada.
-
-Durante a análise foi identificado que a exibição das senhas representa um risco de segurança. Como melhoria futura, recomenda-se armazenar as senhas utilizando criptografia (password_hash) e remover sua exibição da interface.
-
-Cabeçalho da Aplicação
-
-O sistema utiliza um componente de cabeçalho para exibir o nome da aplicação em todas as páginas. Essa abordagem permite reutilizar o mesmo código em diferentes telas, facilitando a manutenção e a padronização da interface.
+## Nome do Projeto
 
 Sistema Simples de Login em PHP
-Objetivo
 
-Sistema desenvolvido em PHP e MySQL para realizar autenticação de usuários, cadastro, controle de sessões e listagem de usuários cadastrados.
+## Objetivo da Aplicação
 
-Funcionamento
+Desenvolver um sistema web básico de autenticação de usuários utilizando PHP e MySQL. A aplicação permite realizar login, controlar sessões, cadastrar novos usuários e visualizar os usuários registrados no banco de dados.
 
-O usuário realiza login através da tela inicial. Após a autenticação, é direcionado para a página principal, onde pode visualizar seu usuário, cadastrar novos usuários, consultar os registros existentes e realizar logout.
+O projeto tem como finalidade aplicar conceitos fundamentais de desenvolvimento web, integração com banco de dados e controle de acesso.
 
-Banco de Dados
+## Tecnologias Utilizadas
 
-O sistema utiliza o banco sistema_simples, contendo uma tabela de usuários com os campos:
+PHP
+HTML5
+CSS3
+MySQL
+XAMPP
+SQL
+Biblioteca MySQLi
 
-id
-usuario
-senha
+## Descrição dos Arquivos
 
-Principais Aprendizados
+### index.php
+
+Tela inicial do sistema.
+
+Responsável por:
+
+Exibir o formulário de login.
+Receber usuário e senha.
+Consultar o banco de dados.
+Criar sessão para usuários autenticados.
+Redirecionar para a página principal.
+
+### connect.php
+
+Responsável por:
+
+Iniciar a sessão do usuário.
+Configurar os dados de conexão.
+Estabelecer conexão com o banco MySQL.
+Disponibilizar a variável $conn para todo o sistema.
+
+### home.php
+
+Página principal da aplicação.
+
+Funcionalidades:
+
+Verificar se o usuário está autenticado.
+Exibir o usuário logado.
+Permitir cadastro de novos usuários.
+Exibir a lista de usuários cadastrados.
+Disponibilizar o logout.
+
+### logout.php
+
+Responsável por:
+
+Encerrar a sessão atual.
+Remover dados de autenticação.
+Redirecionar para a tela de login.
+
+### table.php
+
+Componente responsável por:
+
+Consultar todos os usuários cadastrados.
+Exibir os dados em uma tabela HTML.
+
+### header.php
+
+Componente de cabeçalho reutilizável.
+
+Responsável por exibir o nome da aplicação nas páginas.
+
+### navbar.php
+
+Componente de navegação utilizado para organizar a interface do sistema.
+
+### style.css
+
+Arquivo responsável pela estilização visual da aplicação.
+
+## Funcionamento do Sistema
+
+O usuário acessa a página de login.
+Informa nome de usuário e senha.
+O sistema verifica os dados no banco de dados.
+Caso os dados estejam corretos:
+Uma sessão é criada.
+O usuário é redirecionado para a página principal.
+Na página principal é possível:
+Visualizar o usuário logado.
+Cadastrar novos usuários.
+Consultar os usuários cadastrados.
+Encerrar a sessão.
+Ao clicar em "Sair", o sistema destrói a sessão e retorna para a tela de login.
+
+## Banco de Dados
+
+Tabela utilizada:
+
+### users
+
+Campo	Tipo
+id	INT
+username	VARCHAR
+password	VARCHAR
+
+## Principais Aprendizados
 
 Durante a análise e documentação do projeto foi possível compreender:
 
-Estrutura básica de aplicações PHP.
+Estrutura básica de um sistema PHP.
+Funcionamento de formulários HTML.
+Envio de dados utilizando método POST.
+Controle de sessões com PHP.
 Integração entre PHP e MySQL.
 Utilização da biblioteca MySQLi.
-Criação e manipulação de sessões.
-Uso de formulários HTML.
-Processamento de requisições POST.
-Execução de consultas SQL.
+Criação e execução de consultas SQL.
 Organização de componentes reutilizáveis.
-Controle de autenticação.
-Importância da documentação e comentários no código.
+Redirecionamento entre páginas.
+Importância da documentação e comentários em projetos.
+
+## Melhorias Futuras
+
+Implementar Prepared Statements para evitar SQL Injection.
+Utilizar password_hash() e password_verify() para proteção de senhas.
+Adicionar validação de campos.
+Melhorar o layout utilizando Bootstrap.
+Criar funcionalidades de edição e exclusão de usuários (CRUD completo).
+Implementar diferentes níveis de acesso.
+Adicionar mensagens de erro mais detalhadas.
+Ocultar senhas da listagem de usuários.
+
+## Autor
+
+Projeto desenvolvido para fins educacionais com o objetivo de praticar conceitos de PHP, MySQL e desenvolvimento web.
