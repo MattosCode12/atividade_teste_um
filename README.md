@@ -67,3 +67,7 @@ Nome de usuário;
 Senha cadastrada.
 
 Durante a análise foi identificado que a exibição das senhas representa um risco de segurança. Como melhoria futura, recomenda-se armazenar as senhas utilizando criptografia (password_hash) e remover sua exibição da interface.
+
+Cabeçalho da Aplicação
+
+O sistema utiliza um componente de cabeçalho para exibir o nome da aplicação em todas as páginas. Essa abordagem permite reutilizar o mesmo código em diferentes telas, facilitando a manutenção e a padronização da interface.
