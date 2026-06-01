@@ -44,3 +44,14 @@ Redireciona o usuário para a página inicial.
 Finaliza a execução do script.
 
 Esse processo garante que apenas usuários autenticados possam acessar as áreas restritas da aplicação.
+
+Home do Sistema
+
+A página principal do sistema é acessada apenas por usuários autenticados. Nela é possível:
+
+Visualizar o usuário atualmente logado.
+Cadastrar novos usuários.
+Consultar registros exibidos em tabela.
+Encerrar a sessão através do logout.
+
+A proteção de acesso é realizada utilizando sessões PHP, impedindo que usuários não autenticados acessem funcionalidades internas da aplicação.
